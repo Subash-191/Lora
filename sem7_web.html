@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      
+      <title>Login Page</title>
+      <link rel="stylesheet" href="style(sem7).css">
+    
+   </head>
+
+   <script>  
+
+      function validateform(){  
+      var name=document.myform.name.value;  
+      var password=document.myform.password.value;  
+      var scode=document.myform.scode.value;
+        
+      if((name!="admin1")||(password!="smart1")||(scode!="lora1")){  
+        alert("Invalid admin credentials");  
+        return false;  
+         }
+      }  
+      </script>
+
+   <body>
+    <h1 style="color:rgb(207, 248, 248) ;"> Smart building management</h1>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login"  >
+              <h5>Admin Login</h5> 
+            </div>      
+         </div>
+    <div class="form-container"> 
+            <div class="form-inner">
+               <form name="myform" method="post" action="page2.html" class="login" onsubmit="return validateform()">
+                  <div class="field">
+                     <input type="text" name="name" placeholder="Username" size="30" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" name="password" placeholder="Password" size="30" required>
+                  </div>
+                  <div class="field">
+                    <input type="password" name="scode" placeholder="Security code" size="30" required>
+                 </div>
+                 
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+                
+               </form>
+
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
